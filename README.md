@@ -51,7 +51,7 @@ To load a shapefile we use the *vect* function of the terra package **(*Be aware
     plot(Aguan_basin)
 ```
 ### Adjusting the reference system of the Spatvector
-####if the crs of the stack and the SHP does not match, we need to reproject the shapefile to the coordinates system of the raster, we can check that with 
+if the crs of the stack and the SHP does not match, we need to reproject the shapefile to the coordinates system of the raster, we can check that with 
 ```{r}
 chirps
 ```
@@ -60,8 +60,8 @@ chirps
 ```{r}
 Aguan_basin
 ```
-####If the stack and the SHP are in a diferent coordinate system, we solve this with the project() function
-####More info on https://rdrr.io/cran/terra/man/project.html
+###If the stack and the SHP are in a diferent coordinate system, we solve this with the project() function
+###More info on https://rdrr.io/cran/terra/man/project.html
 ```{r}
   Aguan_basin<-project(Aguan_basin,"+proj=longlat +datum=WGS84")
 Aguan_basin
